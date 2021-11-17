@@ -1,0 +1,102 @@
+body {
+    background-color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+.site-header {
+    background-color: brown;
+    padding: 15px;
+}
+.site-main {
+    background-color: turquoise;
+    padding: 15px;
+}
+.widget-area {
+    background-color: salmon;
+    padding: 15px;
+}
+.site-footer {
+    background-color: slategray;
+    padding: 15px;
+}
+
+
+@media (min-width: 320px) { 
+    .container {
+        height: 100%;
+        display: grid;
+        grid-gap: 4px;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(11, 1fr);
+        border: 5px solid grey;
+    }
+    .site-header {
+        grid-row: 1 / 2;
+    }
+    .site-main {
+        grid-row: 2 / 8;
+    }
+    .widget-area {
+        grid-row: 8 / 11;
+    }
+    .site-footer {
+        grid-row: 11 / 12;
+    }
+}
+
+@media (min-width: 1024px) { 
+    .container {
+        height: 100%;
+        display: grid;
+        grid-gap: 4px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(11, 1fr);
+        border: 5px solid grey;
+    }
+    .site-header {
+        grid-row: 1 / 12;
+        grid-column: 1 / 2;
+    }
+    .site-main {
+        grid-row: 1 / 8;
+        grid-column: 2 / 4;
+
+    }
+    .widget-area {
+        grid-row: 8 / 10;
+        grid-column: 2 / 4;
+    }
+    .site-footer {
+        grid-row: 10 / 12;
+        grid-column: 2 / 4;
+    }
+}
+
+@media (min-width: 1024px) { 
+    .container {
+        display: grid;
+        grid-gap: 4px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(15, 1fr);
+        border: 5px solid grey;
+    }
+    .site-header {
+        grid-row: 1 / 16;
+        grid-column: 1 / 2;
+    }
+    .site-main {
+        grid-row: 1 / 10;
+        grid-column: 2 / 4;
+
+    }
+    .widget-area {
+        grid-row: 10 / 14;
+        grid-column: 2 / 4;
+    }
+    .site-footer {
+        grid-row: 14 / 16;
+        grid-column: 2 / 4;
+    }
+}
